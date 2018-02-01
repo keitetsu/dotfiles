@@ -2,8 +2,8 @@
 
 ## License [![](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][license]
 
-Copyright (C) 2016, Oliver Stotzem, all rights reserved.
+Copyright © Oliver Stotzem
 
-Licensed under the [MIT license](LICENSE.md).
+Licensed under the [MIT license][license].
 
 [license]: LICENSE.md

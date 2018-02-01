@@ -1,0 +1,20 @@
+# -*- Mode: conf -*-
+## User-own git configuration
+
+[user]
+
+# Your email address to be recorded in any newly created commits.  Can be
+# overridden by the GIT_AUTHOR_EMAIL, GIT_COMMITTER_EMAIL, and EMAIL environment
+# variables.  See man git-commit-tree.
+email = john.doe@example.org
+
+# Your full name to be recorded in any newly created commits.  Can be overridden
+# by the GIT_AUTHOR_NAME and GIT_COMMITTER_NAME environment variables.  See man
+# git-commit-tree.
+name = John Doe
+
+# If git-tag or git-commit is not selecting the key you want it to automatically
+# when creating a signed tag or commit, you can override the default selection
+# with this variable.  This option is passed unchanged to gpg’s --local-user
+# parameter, so you may specify a key using any method that gpg supports.
+signingkey = DEADBEEF

@@ -1,0 +1,11 @@
+# -*- Mode: conf -*-
+## Global git configuration
+#  Author:     Oliver Stotzem
+#  Repository: https://github.com/keitetsu/dotfiles
+#-------------------------------------------------------------------------------
+# Copyright © Oliver Stotzem
+#
+# See the file LICENSE.md for copying permission.
+
+[include]
+path = .user/gitconfig # The user’s own config
