@@ -1,0 +1,23 @@
+# -*- Mode: conf -*-
+## Git aliases
+#  Author:     Oliver Stotzem
+#  Repository: https://github.com/keitetsu/dotfiles
+#-------------------------------------------------------------------------------
+# Copyright © Oliver Stotzem
+#
+# See the file LICENSE.md for copying permission.
+
+[alias]
+
+a  = add
+aa = add -A
+c  = commit -S
+co = checkout
+d  = diff
+ls = ls-files
+st = status --branch --short
+
+# Zeige die letzten 30 Commits, jeweils in einer Zeile.
+l = log --graph --max-count=30 --decorate=auto\
+    --pretty='format:%Cblue%ad %Cgreen%h %Creset%s%Cred%d'\
+    --date='format:%Y-%m-%d %H:%M:%S'
