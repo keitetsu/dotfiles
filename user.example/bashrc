@@ -1,0 +1,10 @@
+# -*- Mode: sh -*-
+## ~/.user/bashrc
+#  User-own bashrc configuration
+#  executed by bash(1) for non-login shells.
+#  Author:     Oliver Stotzem
+#  Repository: https://github.com/keitetsu/dotfiles
+#-------------------------------------------------------------------------------
+# Copyright © Oliver Stotzem
+#
+# See the file LICENSE.md for copying permission.

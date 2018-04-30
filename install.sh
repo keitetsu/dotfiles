@@ -1,5 +1,4 @@
 #!/bin/sh
-# -*- Mode: conf -*-
 ## Dotfiles installer
 #  Author:     Oliver Stotzem
 #  Repository: https://github.com/keitetsu/dotfiles
@@ -54,9 +53,10 @@ mkdir "$BACKUP_DIR"
 
 echo " * Installiere Dotfiles:"
 install_dotfile "gitconfig/main" ".gitconfig"
+install_dotfile "sh/bashrc"      ".bashrc"
 
 if [ ! -d "$HOME/.user" ]; then
-    " * Kopiere Beispiel-User-Konfiguration"
+    echo " * Kopiere Beispiel-User-Konfiguration"
     cp -r "$INSTALL_DIR/user.example" "$HOME/.user"
 fi
 
