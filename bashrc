@@ -14,6 +14,7 @@ esac
 
 # Add user's bin dir to the beginning of $PATH
 [ -e "$HOME/.bin" ] && export PATH="$HOME/.bin:$PATH"
+[ -e "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
 
 #===============================================================================
 #=========================[ ::: HISTORY CONTROL ::: ]===========================
