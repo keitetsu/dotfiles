@@ -32,6 +32,7 @@ echo "Install dotfiles:"
 
 install_symlink bashrc    .bashrc
 install_symlink gitconfig .gitconfig
+install_symlink emacs     .emacs.d
 install_symlink profile   .profile
 
 if [ -z "$(ls -A "$BACKUP_DIR")" ]; then
