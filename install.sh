@@ -8,6 +8,10 @@
 
 BACKUP_DIR="${HOME}/Old dotfiles ($(date +%Y-%m-%dT%H-%M-%S))"
 
+backup_file() {
+    [ -e "$1" ] && mv "$1" "$BACKUP_DIR"
+}
+
 install_symlink() {
     local target="${HOME}/.config/keitetsu/${1}"
     local link="$2"
@@ -17,11 +21,7 @@ install_symlink() {
         link="${HOME}/${link}"
     fi
 
-    if [ -L "$link" ]; then
-        rm "$link"
-    elif [ -e "$link" ]; then
-        mv "$link" "$BACKUP_DIR"
-    fi
+    backup_file "$link"
     echo -n " * "
     ln -brsv "$target" "$link"
 }
@@ -30,10 +30,19 @@ mkdir "$BACKUP_DIR"
 
 echo "Install dotfiles:"
 
-install_symlink bashrc    .bashrc
+# Bash
+install_symlink bashrc  .bashrc
+install_symlink profile .profile
+backup_file .bash_login
+backup_file .bash_profile
+
+# Git
 install_symlink gitconfig .gitconfig
-install_symlink emacs     .emacs.d
-install_symlink profile   .profile
+
+# GNU Emacs
+install_symlink emacs .emacs.d
+backup_file .emacs
+backup_file .emacs.el
 
 if [ -z "$(ls -A "$BACKUP_DIR")" ]; then
     rmdir "$BACKUP_DIR"
