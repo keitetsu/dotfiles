@@ -12,9 +12,12 @@ case $- in
     *)   return;;
 esac
 
-# Add user's bin dir to the beginning of $PATH
-[ -e "$HOME/.bin" ] && export PATH="$HOME/.bin:$PATH"
-[ -e "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
+# Set path of config temporary:
+keitetsu_config_dir="$HOME/.config/keitetsu"
+
+# Include environment variables:
+[ -f "$keitetsu_config_dir/env.sh" ] && \
+    . "$keitetsu_config_dir/env.sh"
 
 #===============================================================================
 #=========================[ ::: HISTORY CONTROL ::: ]===========================
@@ -35,5 +38,7 @@ HISTFILESIZE=2000
 #===============================================================================
 
 # Include user’s config, if it exists
-[ -f "$HOME/.config/keitetsu/user/bashrc" ] && \
-    . "$HOME/.config/keitetsu/user/bashrc"
+[ -f "$keitetsu_config_dir/user/bashrc" ] && \
+    . "$keitetsu_config_dir/user/bashrc"
+
+unset keitetsu_config_dir
