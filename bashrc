@@ -19,6 +19,10 @@ keitetsu_config_dir="$HOME/.config/keitetsu"
 [ -f "$keitetsu_config_dir/env.sh" ] && \
     . "$keitetsu_config_dir/env.sh"
 
+# Include common aliases:
+[ -f "$keitetsu_config_dir/aliases.sh" ] && \
+    . "$keitetsu_config_dir/aliases.sh"
+
 #===============================================================================
 #=========================[ ::: HISTORY CONTROL ::: ]===========================
 #===============================================================================
